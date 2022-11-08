@@ -16,7 +16,7 @@ public class Ingredient {
 	@Column(name = "ID", length = 11, nullable = false)
 	private Integer id;
 	
-	@Column(name = "LIBELLE", length = 255, nullable = false)
+	@Column(name = "LIBELLE", length = 1000, nullable = false)
 	private String libelle;
 
 	/**

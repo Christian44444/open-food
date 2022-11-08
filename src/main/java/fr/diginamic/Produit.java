@@ -22,6 +22,9 @@ public class Produit {
 	@Column(name = "ID", length = 11, nullable = false)
 	private Integer id;
 	
+	@Column(name = "NOM_PRODUIT", length = 255, nullable = false)
+	private String nom;
+	
 	@ManyToOne
 	@JoinColumn(name = "ID_CATEGORIE")
 	private Categorie categorie;
@@ -41,7 +44,7 @@ public class Produit {
 
 	@Override
 	public String toString() {
-		return " Produit " + id + ", categorie=" + categorie + ", ingredients=" + ingredients + "]";
+		return " Produit " + nom + " " + id + ", categorie=" + categorie + ", ingredients=" + ingredients + "]";
 	}
 
 	/**
@@ -56,6 +59,20 @@ public class Produit {
 	 */
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	/**
+	 * @return the nom
+	 */
+	public String getNom() {
+		return nom;
+	}
+
+	/**
+	 * @param nom the nom to set
+	 */
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 
 	/**
